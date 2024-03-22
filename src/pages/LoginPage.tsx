@@ -30,7 +30,6 @@ const LoginPage = () => {
 
   const { errors } = formState;
   const onSubmit: SubmitHandler<FormFields> = (data) => {
-    console.log(data);
     mutate(data);
   };
 
