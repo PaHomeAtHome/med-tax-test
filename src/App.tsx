@@ -6,7 +6,7 @@ import { CircularProgress, ThemeProvider } from '@mui/material';
 import ProtectedRoute from './functions/ProtectedRoute';
 import ClientsPage from './pages/ClientsPage';
 import LoginPage from './pages/LoginPage';
-// import NotFoundPage from './pages/NotFoundPage';
+import NotFoundPage from './pages/NotFoundPage';
 import theme from './themes/theme';
 
 const queryClient = new QueryClient();
@@ -24,10 +24,10 @@ const router = createBrowserRouter([
     path: '/login',
     element: <LoginPage />,
   },
-  // {
-  //   path: '/*',
-  //   element: <NotFoundPage />,
-  // },
+  {
+    path: '/*',
+    element: <NotFoundPage />,
+  },
 ]);
 
 function App() {
