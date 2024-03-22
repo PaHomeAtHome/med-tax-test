@@ -35,7 +35,7 @@ const LoginPage = () => {
   };
 
   return (
-    <Container>
+    <Container sx={{ width: '480px' }}>
       <Typography component="h1" variant="h5">
         Log in
       </Typography>
@@ -66,7 +66,13 @@ const LoginPage = () => {
           autoComplete="current-password"
         />
         <Typography color={'red'}>{errors.password?.message}</Typography>
-        <Button type="submit" fullWidth variant="contained" color="primary">
+        <Button
+          type="submit"
+          fullWidth
+          variant="contained"
+          color="primary"
+          sx={{ my: 2 }}
+        >
           Log In
         </Button>
       </form>
