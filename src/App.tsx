@@ -13,7 +13,7 @@ const queryClient = new QueryClient();
 
 const router = createBrowserRouter([
   {
-    path: 'med-tax-test/',
+    path: '/',
     element: (
       <ProtectedRoute>
         <ClientsPage />
@@ -21,11 +21,11 @@ const router = createBrowserRouter([
     ),
   },
   {
-    path: 'med-tax-test/login',
+    path: '/login',
     element: <LoginPage />,
   },
   {
-    path: 'med-tax-test/*',
+    path: '/*',
     element: <NotFoundPage />,
   },
 ]);
