@@ -11,7 +11,7 @@ export default function ProtectedRoute({ children }: ProtectedRouteProps) {
 
   useEffect(() => {
     if (!data) {
-      navigate('/login', { replace: true });
+      navigate('/med-tax-test/login', { replace: true });
     }
   }, [navigate, data]);
 
