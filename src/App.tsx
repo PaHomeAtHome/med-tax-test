@@ -1,6 +1,6 @@
 import './App.css';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
-import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import { createHashRouter, RouterProvider } from 'react-router-dom';
 import { CircularProgress, ThemeProvider } from '@mui/material';
 
 import ProtectedRoute from './functions/ProtectedRoute';
@@ -11,7 +11,7 @@ import theme from './themes/theme';
 
 const queryClient = new QueryClient();
 
-const router = createBrowserRouter([
+const router = createHashRouter([
   {
     path: '/',
     element: (
