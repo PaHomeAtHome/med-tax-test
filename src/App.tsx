@@ -30,7 +30,7 @@ const router = createBrowserRouter(
       element: <NotFoundPage />,
     },
   ],
-  // { basename: '/med-tax-test/' },
+  { basename: '/med-tax-test' },
 );
 
 function App() {
