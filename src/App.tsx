@@ -11,24 +11,27 @@ import theme from './themes/theme';
 
 const queryClient = new QueryClient();
 
-const router = createBrowserRouter([
-  {
-    path: '',
-    element: (
-      <ProtectedRoute>
-        <ClientsPage />
-      </ProtectedRoute>
-    ),
-  },
-  {
-    path: 'login',
-    element: <LoginPage />,
-  },
-  {
-    path: '/*',
-    element: <NotFoundPage />,
-  },
-]);
+const router = createBrowserRouter(
+  [
+    {
+      path: '',
+      element: (
+        <ProtectedRoute>
+          <ClientsPage />
+        </ProtectedRoute>
+      ),
+    },
+    {
+      path: 'login',
+      element: <LoginPage />,
+    },
+    {
+      path: '/*',
+      element: <NotFoundPage />,
+    },
+  ],
+  { basename: '/med-tax-test/' },
+);
 
 function App() {
   return (
