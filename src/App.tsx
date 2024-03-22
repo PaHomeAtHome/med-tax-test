@@ -1,6 +1,6 @@
 import './App.css';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
-import { createHashRouter, HashRouter, RouterProvider } from 'react-router-dom';
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import { CircularProgress, ThemeProvider } from '@mui/material';
 
 import ProtectedRoute from './functions/ProtectedRoute';
@@ -11,7 +11,7 @@ import theme from './themes/theme';
 
 const queryClient = new QueryClient();
 
-const router = createHashRouter([
+const router = createBrowserRouter([
   {
     path: '/',
     element: (
@@ -34,12 +34,10 @@ function App() {
   return (
     <QueryClientProvider client={queryClient}>
       <ThemeProvider theme={theme}>
-        <HashRouter>
-          <RouterProvider
-            router={router}
-            fallbackElement={<CircularProgress />}
-          />
-        </HashRouter>
+        <RouterProvider
+          router={router}
+          fallbackElement={<CircularProgress />}
+        />
       </ThemeProvider>
     </QueryClientProvider>
   );
