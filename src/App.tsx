@@ -13,7 +13,7 @@ const queryClient = new QueryClient();
 
 const router = createBrowserRouter([
   {
-    path: '/',
+    path: '',
     element: (
       <ProtectedRoute>
         <ClientsPage />
@@ -21,7 +21,7 @@ const router = createBrowserRouter([
     ),
   },
   {
-    path: '/login',
+    path: 'login',
     element: <LoginPage />,
   },
   {
